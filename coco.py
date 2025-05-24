@@ -3,17 +3,22 @@ Codigo Facilito cli tool
 """
 
 from typing import Annotated
+import sys
 
 import typer
 from rich import print as tprint
 from rich.console import Console
 from rich.table import Table
+sys.path.append("/Users/newbie/Documents/CODIGO_FACILITO/codigo_facilito_downloader/src/facilito")
+sys.path.append("..")
+# print(sys.path)
 
-from facilito import consts, helpers  # type: ignore
-from facilito.core import Client  # type: ignore
-from facilito.errors import CourseError, DownloadError, VideoError  # type: ignore
-from facilito.models.video import Quality  # type: ignore
-from facilito.utils.logger import cli_logger  # type: ignore
+from src.facilito import consts, helpers  # type: ignore
+from src.facilito.core import Client  # type: ignore
+from src.facilito.errors import CourseError, DownloadError, VideoError  # type: ignore
+from src.facilito.models.video import Quality  # type: ignore
+
+from src.facilito.utils.logger import cli_logger  # type: ignore
 
 app = typer.Typer(
     rich_markup_mode="markdown",
@@ -29,7 +34,7 @@ def download(
     ],
     quality: Quality = typer.Option(
         prompt=True,
-        default=Quality.BEST.value,
+        default=Quality.P480.value,
         prompt_required=True,
     ),
     headless: bool = False,

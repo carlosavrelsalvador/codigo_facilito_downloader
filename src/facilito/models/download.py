@@ -2,7 +2,7 @@
 Video download model
 """
 
-from ..errors import DownloadError
+from src.facilito.errors import DownloadError
 
 
 class YoutubeDLLogger:

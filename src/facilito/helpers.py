@@ -1,5 +1,5 @@
 """
-Helpers
+helpers
 """
 
 import json
@@ -9,7 +9,7 @@ import subprocess
 from typing import Any, Dict
 
 from . import consts
-from .models.video import Quality
+from models.video import Quality
 
 
 def is_video_url(url: str) -> bool:

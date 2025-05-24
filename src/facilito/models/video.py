@@ -2,14 +2,15 @@
 Video model
 """
 
+
 from enum import Enum
 from typing import Optional
 
 import yt_dlp  # type: ignore
 from pydantic import BaseModel
 
-from .. import consts, helpers
-from ..utils.logger import logger
+from src.facilito import consts, helpers
+from src.facilito.utils.logger import logger
 from .download import YoutubeDLLogger
 
 
@@ -45,7 +46,7 @@ class Video(BaseModel):
         self,
         prefix_name: str = "",
         dir_path: str = consts.DOWNLOADS_DIR,
-        quality: Quality = Quality.BEST,
+        quality: Quality = Quality.P480,
         cookiefile: str = consts.COOKIES_FILE,
     ) -> int:
         """video and article downloader"""

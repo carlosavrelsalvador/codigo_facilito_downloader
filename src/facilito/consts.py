@@ -1,5 +1,5 @@
 """
-Constants
+consts
 """
 
 from enum import Enum
