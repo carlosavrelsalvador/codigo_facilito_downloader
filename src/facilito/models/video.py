@@ -46,7 +46,7 @@ class Video(BaseModel):
         self,
         prefix_name: str = "",
         dir_path: str = consts.DOWNLOADS_DIR,
-        quality: Quality = Quality.P480,
+        quality: Quality = Quality.BEST,
         cookiefile: str = consts.COOKIES_FILE,
     ) -> int:
         """video and article downloader"""

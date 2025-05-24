@@ -34,7 +34,7 @@ def download(
     ],
     quality: Quality = typer.Option(
         prompt=True,
-        default=Quality.P480.value,
+        default=Quality.BEST.value,
         prompt_required=True,
     ),
     headless: bool = False,
